@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Довідник студента</string>
+    <string name="student_list">Список студентів</string>
+    <string name="open_list_of_students">Показати список</string>
+    <string-array name="students_groups">
+        <item>301</item>
+        <item>302</item>
+        <item>308</item>
+        <item>309</item>
+    </string-array>
+</resources>
