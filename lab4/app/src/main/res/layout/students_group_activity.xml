@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/text_number_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:text="null" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="2dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_students" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Комп'ютерні науки"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text_number"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:gravity="bottom"
+        android:text="Номер групи:"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearLayout" />
+
+    <EditText
+        android:id="@+id/edit_text_number"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/text_number"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <TextView
+        android:id="@+id/text_faculty"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:gravity="bottom"
+        android:text="Факультет:"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_number" />
+
+    <EditText
+        android:id="@+id/edit_text_faculty"
+        android:layout_width="0dp"
+        android:layout_marginTop="5dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="5dp"
+        app:layout_constraintStart_toEndOf="@+id/text_faculty"
+        app:layout_constraintTop_toBottomOf="@+id/edit_text_number" />
+
+    <TextView
+        android:id="@+id/edu_level"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Рівень освіти: "
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edit_text_faculty" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/edu_level"
+        app:layout_constraintTop_toTopOf="@+id/edu_level">
+
+        <RadioButton
+            android:id="@+id/edu_level_bachelor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="бакалавр" />
+
+        <RadioButton
+            android:id="@+id/edu_level_master"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="магістр" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/text_check_box"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Додаткові відомості..."
+        android:textSize="16sp"
+        app:layout_constraintWidth_percent="0.3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/radioGroup" />
+
+    <CheckBox
+        android:id="@+id/contract_flg"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="наявність контрактників"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/text_check_box"
+        app:layout_constraintStart_toEndOf="@+id/text_check_box" />
+
+    <CheckBox
+        android:id="@+id/privilage_flg"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="наявність пільговиків"
+        app:layout_constraintStart_toEndOf="@+id/text_check_box"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contract_flg"/>
+
+    <Button
+        android:id="@+id/btn_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:background="#30808080"
+        android:text="Список студентів"
+        android:textColor="@color/black"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/privilage_flg"/>
+
+    <Button
+        android:id="@+id/btn_intent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:background="#30808080"
+        android:text="OK"
+        android:textColor="@color/black"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btn_list"
+        app:layout_constraintTop_toBottomOf="@+id/privilage_flg"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
