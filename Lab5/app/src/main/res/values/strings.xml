@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Практична робота №5</string>
+    <string name="action_color">Змінити колір</string>
+    <string name="action_figures">Інші фігури</string>
+</resources>
